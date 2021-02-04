@@ -4,15 +4,19 @@ using System.Collections.Generic;
 
 namespace CarLotSimulator
 {
-    public class carLot
+    public class CarLot
     {
 
-        public carLot()
+        public CarLot()
         {
-
+            
         }
 
-        public static List<Car> ParkingLot { get; set; } = new List<Car>();
+        public static int numberOfCars = 1;
+
+        public List<Car> Cars = new List<Car>();
+
+       
     }
 
     

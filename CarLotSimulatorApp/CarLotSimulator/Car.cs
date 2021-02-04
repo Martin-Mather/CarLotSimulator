@@ -8,7 +8,8 @@ namespace CarLotSimulator
     {
         public Car()
         {
-
+            CarLot.numberOfCars++;
+            //ClassName.StaticMember
         }
         public int Year { get; set; }
         public string Make { get; set; }
