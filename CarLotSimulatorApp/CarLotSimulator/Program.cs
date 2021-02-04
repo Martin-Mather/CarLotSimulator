@@ -34,6 +34,7 @@ namespace CarLotSimulator
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
 
             var car1 = new Car();
+            Console.WriteLine($"Number of cars: {CarLot.numberOfCars}");
             car1.Year = 2020;
             car1.Make = "Toyota";
             car1.Model = "Supra";
@@ -46,21 +47,24 @@ namespace CarLotSimulator
 
 
 
-            var car2 = new Car() 
-            { Year = 1965,
-                Make = "Ford", 
-                Model = "F-100", 
-                EngineNoise = "Nothing", 
-                HonkNoise = "Help", 
-                IsDriveable = false
-            };
+            var car2 = new Car();
 
+            car2.Year = 1965;
+            car2.Make = "Ford";
+            car2.Model = "F-100";
+            car2.EngineNoise = "Nothing";
+            car2.HonkNoise = "Help"; 
+            car2.IsDriveable = false;
+            
+            Console.WriteLine($"Number of cars: {CarLot.numberOfCars}");
             car2.MakeEngineNoise();
             car2.MakeHonkNoise();
 
            
 
             var car3 = new Car();
+            Console.WriteLine($"Number of cars: {CarLot.numberOfCars}");
+
             car3.Year = 1999;
             car3.Make = "Nissan";
             car3.Model = "Skyline GTR";
@@ -72,16 +76,16 @@ namespace CarLotSimulator
             car3.MakeHonkNoise();
             Console.WriteLine();
 
-            Car dodge = new Car();
-            dodge.Year = 2020;
-            dodge.Make = "Challenger";
-            dodge.Model = "Demon";
-            dodge.EngineNoise = "Roar";
-            dodge.HonkNoise = "Honk Honk";
-            dodge.IsDriveable = false;
+            var car4 = new Car();
+            car4.Year = 2020;
+            car4.Make = "Challenger";
+            car4.Model = "Demon";
+            car4.EngineNoise = "Roar";
+            car4.HonkNoise = "Honk Honk";
+            car4.IsDriveable = false;
 
-            dodge.MakeEngineNoise();
-            dodge.MakeHonkNoise();
+            car4.MakeEngineNoise();
+            car4.MakeHonkNoise();
 
 
             //Create a CarLot class
@@ -92,6 +96,7 @@ namespace CarLotSimulator
             lot.Cars.Add(car1);
             lot.Cars.Add(car2);
             lot.Cars.Add(car3);
+            lot.Cars.Add(car4);
 
 
             foreach (var car in lot.Cars)
@@ -104,6 +109,7 @@ namespace CarLotSimulator
 
 
             }
+            Console.WriteLine($"Number of cars: {CarLot.numberOfCars}");
         }
         
     }
